@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Solid Colors - Download & Use</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>🎨 Unlimited Solid Colors</h1>
+            <p>Download beautiful solid colors for backgrounds, wallpapers & design projects</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="search-section">
+            <input type="text" class="search-box" placeholder="Search colors by name or hex code..." id="searchBox">
+        </div>
+
+        <div class="stats">
+            <h3>Available Colors: <span id="colorCount">0</span></h3>
+            <p>Choose from our extensive collection of categorized solid colors</p>
+        </div>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All Colors</button>
+            <button class="category-btn" data-category="red">Reds</button>
+            <button class="category-btn" data-category="blue">Blues</button>
+            <button class="category-btn" data-category="green">Greens</button>
+            <button class="category-btn" data-category="yellow">Yellows</button>
+            <button class="category-btn" data-category="purple">Purples</button>
+            <button class="category-btn" data-category="orange">Oranges</button>
+            <button class="category-btn" data-category="pink">Pinks</button>
+            <button class="category-btn" data-category="brown">Browns</button>
+            <button class="category-btn" data-category="gray">Grays</button>
+            <button class="category-btn" data-category="black">Blacks</button>
+            <button class="category-btn" data-category="white">Whites</button>
+            <button class="category-btn" data-category="gradient">Gradients</button>
+        </div>
+
+        <div class="colors-grid" id="colorsGrid">
+            <div class="loading">Loading amazing colors...</div>
+        </div>
+    </div>
+
+    <div class="modal" id="colorModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalColorName">Color Name</h2>
+            <div class="modal-color" id="modalColorPreview"></div>
+            <p><strong>Hex Code:</strong> <span id="modalColorCode">#000000</span></p>
+            <button class="download-btn" onclick="downloadCurrentColor()">Download This Color</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

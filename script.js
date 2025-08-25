@@ -1,0 +1,321 @@
+// Comprehensive color database with thousands of colors
+const colorDatabase = {
+    red: [
+        { name: 'Crimson Red', hex: '#DC143C' },
+        { name: 'Fire Engine Red', hex: '#CE2029' },
+        { name: 'Cherry Red', hex: '#D2001F' },
+        { name: 'Ruby Red', hex: '#E0115F' },
+        { name: 'Blood Red', hex: '#8B0000' },
+        { name: 'Brick Red', hex: '#CB4154' },
+        { name: 'Coral Red', hex: '#FF4040' },
+        { name: 'Rose Red', hex: '#C21807' },
+        { name: 'Scarlet Red', hex: '#FF2400' },
+        { name: 'Cardinal Red', hex: '#C41E3A' }
+    ],
+    blue: [
+        { name: 'Ocean Blue', hex: '#006994' },
+        { name: 'Sky Blue', hex: '#87CEEB' },
+        { name: 'Navy Blue', hex: '#000080' },
+        { name: 'Royal Blue', hex: '#4169E1' },
+        { name: 'Electric Blue', hex: '#7DF9FF' },
+        { name: 'Midnight Blue', hex: '#191970' },
+        { name: 'Powder Blue', hex: '#B0E0E6' },
+        { name: 'Steel Blue', hex: '#4682B4' },
+        { name: 'Cobalt Blue', hex: '#0047AB' },
+        { name: 'Turquoise Blue', hex: '#40E0D0' }
+    ],
+    green: [
+        { name: 'Forest Green', hex: '#228B22' },
+        { name: 'Lime Green', hex: '#32CD32' },
+        { name: 'Emerald Green', hex: '#50C878' },
+        { name: 'Mint Green', hex: '#98FB98' },
+        { name: 'Olive Green', hex: '#808000' },
+        { name: 'Sea Green', hex: '#2E8B57' },
+        { name: 'Jade Green', hex: '#00A86B' },
+        { name: 'Neon Green', hex: '#39FF14' },
+        { name: 'Pine Green', hex: '#01796F' },
+        { name: 'Apple Green', hex: '#8DB600' }
+    ],
+    yellow: [
+        { name: 'Golden Yellow', hex: '#FFD700' },
+        { name: 'Lemon Yellow', hex: '#FFF700' },
+        { name: 'Canary Yellow', hex: '#FFEF00' },
+        { name: 'Sunshine Yellow', hex: '#FFFD37' },
+        { name: 'Amber Yellow', hex: '#FFBF00' },
+        { name: 'Mustard Yellow', hex: '#FFDB58' },
+        { name: 'Banana Yellow', hex: '#FFE135' },
+        { name: 'Butter Yellow', hex: '#FFFD74' },
+        { name: 'Corn Yellow', hex: '#FFF8B7' },
+        { name: 'Honey Yellow', hex: '#FFC30B' }
+    ],
+    purple: [
+        { name: 'Royal Purple', hex: '#7851A9' },
+        { name: 'Lavender Purple', hex: '#E6E6FA' },
+        { name: 'Violet Purple', hex: '#8B00FF' },
+        { name: 'Plum Purple', hex: '#DDA0DD' },
+        { name: 'Magenta Purple', hex: '#FF00FF' },
+        { name: 'Orchid Purple', hex: '#DA70D6' },
+        { name: 'Indigo Purple', hex: '#4B0082' },
+        { name: 'Amethyst Purple', hex: '#9966CC' },
+        { name: 'Grape Purple', hex: '#6F2DA8' },
+        { name: 'Lilac Purple', hex: '#C8A2C8' }
+    ],
+    orange: [
+        { name: 'Sunset Orange', hex: '#FF8C00' },
+        { name: 'Tangerine Orange', hex: '#FF8243' },
+        { name: 'Pumpkin Orange', hex: '#FF7518' },
+        { name: 'Peach Orange', hex: '#FFCBA4' },
+        { name: 'Coral Orange', hex: '#FF7F50' },
+        { name: 'Amber Orange', hex: '#FF8000' },
+        { name: 'Apricot Orange', hex: '#FDD5B1' },
+        { name: 'Mandarin Orange', hex: '#FF8243' },
+        { name: 'Papaya Orange', hex: '#FF9F40' },
+        { name: 'Persimmon Orange', hex: '#EC5800' }
+    ],
+    pink: [
+        { name: 'Rose Pink', hex: '#FF007F' },
+        { name: 'Baby Pink', hex: '#F8BBD9' },
+        { name: 'Hot Pink', hex: '#FF1493' },
+        { name: 'Blush Pink', hex: '#FFC0CB' },
+        { name: 'Salmon Pink', hex: '#FF91A4' },
+        { name: 'Magenta Pink', hex: '#FF0090' },
+        { name: 'Cotton Pink', hex: '#FFB7C5' },
+        { name: 'Fuchsia Pink', hex: '#FF77FF' },
+        { name: 'Bubblegum Pink', hex: '#FF69B4' },
+        { name: 'Carnation Pink', hex: '#FFA6C9' }
+    ],
+    brown: [
+        { name: 'Chocolate Brown', hex: '#7B3F00' },
+        { name: 'Coffee Brown', hex: '#6F4E37' },
+        { name: 'Mahogany Brown', hex: '#C04000' },
+        { name: 'Chestnut Brown', hex: '#954535' },
+        { name: 'Walnut Brown', hex: '#773F1A' },
+        { name: 'Caramel Brown', hex: '#AF6E4D' },
+        { name: 'Russet Brown', hex: '#80461B' },
+        { name: 'Sienna Brown', hex: '#A0522D' },
+        { name: 'Umber Brown', hex: '#635147' },
+        { name: 'Mocha Brown', hex: '#967117' }
+    ],
+    gray: [
+        { name: 'Charcoal Gray', hex: '#36454F' },
+        { name: 'Silver Gray', hex: '#C0C0C0' },
+        { name: 'Slate Gray', hex: '#708090' },
+        { name: 'Ash Gray', hex: '#B2BEB5' },
+        { name: 'Storm Gray', hex: '#4F666A' },
+        { name: 'Smoke Gray', hex: '#848884' },
+        { name: 'Pearl Gray', hex: '#E8E8E8' },
+        { name: 'Gunmetal Gray', hex: '#2C3539' },
+        { name: 'Platinum Gray', hex: '#E5E4E2' },
+        { name: 'Steel Gray', hex: '#71797E' }
+    ],
+    black: [
+        { name: 'Pure Black', hex: '#000000' },
+        { name: 'Jet Black', hex: '#0A0A0A' },
+        { name: 'Obsidian Black', hex: '#0B1426' },
+        { name: 'Midnight Black', hex: '#2F4F4F' },
+        { name: 'Onyx Black', hex: '#353839' },
+        { name: 'Coal Black', hex: '#36454F' },
+        { name: 'Raven Black', hex: '#0C0C0C' },
+        { name: 'Ebony Black', hex: '#555D50' },
+        { name: 'Ink Black', hex: '#1C1C1C' },
+        { name: 'Carbon Black', hex: '#1B1B1B' }
+    ],
+    white: [
+        { name: 'Pure White', hex: '#FFFFFF' },
+        { name: 'Snow White', hex: '#FFFAFA' },
+        { name: 'Pearl White', hex: '#F8F6F0' },
+        { name: 'Ivory White', hex: '#FFFFF0' },
+        { name: 'Cream White', hex: '#FFFDD0' },
+        { name: 'Eggshell White', hex: '#F0EAD6' },
+        { name: 'Milk White', hex: '#FEFCFF' },
+        { name: 'Linen White', hex: '#FAF0E6' },
+        { name: 'Bone White', hex: '#F9F6EE' },
+        { name: 'Cotton White', hex: '#FFFBF0' }
+    ]
+};
+
+// Generate additional colors programmatically
+function generateMoreColors() {
+    // Generate gradient variations
+    colorDatabase.gradient = [];
+    const gradientBases = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
+    
+    gradientBases.forEach((base, i) => {
+        for (let j = 0; j < 20; j++) {
+            const variation = adjustBrightness(base, (j - 10) * 0.1);
+            colorDatabase.gradient.push({
+                name: `Gradient ${i + 1}-${j + 1}`,
+                hex: variation
+            });
+        }
+    });
+
+    // Generate more variations for each category
+    Object.keys(colorDatabase).forEach(category => {
+        if (category === 'gradient') return;
+        
+        const originalColors = [...colorDatabase[category]];
+        originalColors.forEach(color => {
+            // Generate lighter variations
+            for (let i = 1; i <= 5; i++) {
+                const lighter = adjustBrightness(color.hex, i * 0.2);
+                colorDatabase[category].push({
+                    name: `Light ${color.name} ${i}`,
+                    hex: lighter
+                });
+            }
+            
+            // Generate darker variations
+            for (let i = 1; i <= 5; i++) {
+                const darker = adjustBrightness(color.hex, -i * 0.2);
+                colorDatabase[category].push({
+                    name: `Dark ${color.name} ${i}`,
+                    hex: darker
+                });
+            }
+        });
+    });
+}
+
+function adjustBrightness(hex, factor) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    
+    const newR = Math.max(0, Math.min(255, Math.floor(r + (255 - r) * factor)));
+    const newG = Math.max(0, Math.min(255, Math.floor(g + (255 - g) * factor)));
+    const newB = Math.max(0, Math.min(255, Math.floor(b + (255 - b) * factor)));
+    
+    return `#${newR.toString(16).padStart(2, '0')}${newG.toString(16).padStart(2, '0')}${newB.toString(16).padStart(2, '0')}`;
+}
+
+let currentCategory = 'all';
+let allColors = [];
+
+function initializeApp() {
+    generateMoreColors();
+    
+    // Flatten all colors
+    allColors = [];
+    Object.keys(colorDatabase).forEach(category => {
+        colorDatabase[category].forEach(color => {
+            allColors.push({ ...color, category });
+        });
+    });
+
+    updateColorCount();
+    displayColors(allColors);
+    setupEventListeners();
+}
+
+function updateColorCount() {
+    document.getElementById('colorCount').textContent = allColors.length.toLocaleString();
+}
+
+function displayColors(colors) {
+    const grid = document.getElementById('colorsGrid');
+    grid.innerHTML = '';
+
+    colors.forEach(color => {
+        const card = createColorCard(color);
+        grid.appendChild(card);
+    });
+}
+
+function createColorCard(color) {
+    const card = document.createElement('div');
+    card.className = 'color-card';
+    card.innerHTML = `
+        <div class="color-preview" style="background-color: ${color.hex}"></div>
+        <div class="color-info">
+            <div class="color-name">${color.name}</div>
+            <div class="color-code">${color.hex}</div>
+            <button class="download-btn" onclick="downloadColor('${color.hex}', '${color.name}')">Download</button>
+        </div>
+    `;
+    
+    card.addEventListener('click', () => openModal(color));
+    return card;
+}
+
+function setupEventListeners() {
+    // Category buttons
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            
+            const category = e.target.dataset.category;
+            currentCategory = category;
+            
+            if (category === 'all') {
+                displayColors(allColors);
+            } else {
+                const filteredColors = allColors.filter(color => color.category === category);
+                displayColors(filteredColors);
+            }
+        });
+    });
+
+    // Search functionality
+    document.getElementById('searchBox').addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        let colorsToSearch = currentCategory === 'all' ? allColors : 
+            allColors.filter(color => color.category === currentCategory);
+        
+        const filtered = colorsToSearch.filter(color => 
+            color.name.toLowerCase().includes(searchTerm) || 
+            color.hex.toLowerCase().includes(searchTerm)
+        );
+        
+        displayColors(filtered);
+    });
+}
+
+function downloadColor(hex, name) {
+    // Create canvas
+    const canvas = document.createElement('canvas');
+    canvas.width = 1920;
+    canvas.height = 1080;
+    const ctx = canvas.getContext('2d');
+    
+    // Fill with color
+    ctx.fillStyle = hex;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Download
+    canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${name.replace(/\s+/g, '_')}_${hex.replace('#', '')}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+}
+
+let currentModalColor = null;
+
+function openModal(color) {
+    currentModalColor = color;
+    document.getElementById('modalColorName').textContent = color.name;
+    document.getElementById('modalColorPreview').style.backgroundColor = color.hex;
+    document.getElementById('modalColorCode').textContent = color.hex;
+    document.getElementById('colorModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('colorModal').style.display = 'none';
+}
+
+function downloadCurrentColor() {
+    if (currentModalColor) {
+        downloadColor(currentModalColor.hex, currentModalColor.name);
+        closeModal();
+    }
+}
+
+// Initialize the app
+initializeApp();
